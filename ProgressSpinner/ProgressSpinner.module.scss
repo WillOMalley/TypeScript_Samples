@@ -1,0 +1,63 @@
+// Import the core Framework styles:
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
+
+.ProgressSpinner {
+  position: absolute;
+  background-color: rgba(95, 89, 89, 0.8);
+  border: solid 1px #000000;
+  border-radius: 5px;
+  align-content: center;
+  display: none;
+  z-index: 10000;
+  vertical-align: middle;
+
+  .loader {
+    position: absolute;
+    border: 8px solid blue;
+    border-top: 8px outset lightblue;
+    border-radius: 75%;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    text-align: center;
+    line-height: 50px;
+    z-index: 100;
+    margin-left: 20%;
+    margin-top: 45%;
+    vertical-align: middle;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .LoaderMessage {
+    position: relative;
+    color: white;
+    text-align: center;
+    align-content: center;
+    width: 110px;
+    height: auto;
+    word-wrap: break-word;
+    vertical-align: middle;
+    display: inline-block;
+    z-index: 100;
+  }
+
+}
